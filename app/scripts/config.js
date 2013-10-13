@@ -7,19 +7,19 @@ app.config(function($routeProvider) {
     .when('/', {
       templateUrl: 'views/main.html'
     })
+    .when('/trackpost', {
+      templateUrl: 'views/post.html',
+      controller: 'PostCtrl as post'
+    })
     .when('/trackpost/:post', {
       templateUrl: 'views/trackpost.html',
       controller: 'TrackPostCtrl as post'
     })
-    .when('/trackpost', {
-      templateUrl: 'views/trackpost.html',
-      controller: 'TrackPostCtrl as post'
+    .when('/trackuser', {
+      templateUrl: 'views/user.html',
+      controller: 'UserCtrl as user'
     })
     .when('/trackuser/:username', {
-      templateUrl: 'views/trackuser.html',
-      controller: 'TrackUserCtrl as user'
-    })
-    .when('/trackuser', {
       templateUrl: 'views/trackuser.html',
       controller: 'TrackUserCtrl as user'
     })
